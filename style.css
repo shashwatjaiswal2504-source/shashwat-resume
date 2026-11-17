@@ -1,0 +1,691 @@
+
+/* ==========================================
+   SHASHWAT JAISWAL - PERSONAL PORTFOLIO
+   Main stylesheet
+   ========================================== */
+
+
+/* 1. ROOT VARIABLES */
+
+:root {
+    --navy: #142D4E;
+    --blue: #176B87;
+    --teal: #45B3C7;
+    --gold: #F4B942;
+
+    --white: #FFFFFF;
+    --light: #F1F5F9;
+    --dark: #263449;
+    --grey: #64748B;
+
+    --shadow: 0 8px 25px rgba(20, 45, 78, 0.08);
+
+    --transition: all 0.3s ease;
+}
+
+
+/* 2. UNIVERSAL SELECTOR */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+/* 3. BODY */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+
+/* 4. HEADER AND NAVIGATION */
+
+.header {
+    background-color: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 75px;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--teal);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+}
+
+.navigation a {
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.navigation a:hover {
+    color: var(--teal);
+}
+
+
+/* 5. HERO SECTION */
+
+.hero {
+    background: linear-gradient(
+        120deg,
+        #10253F,
+        #176B87
+    );
+
+    color: var(--white);
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    flex: 1.5;
+}
+
+.hero-intro {
+    color: var(--teal);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.25;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero-text h1 span {
+    color: var(--teal);
+}
+
+.hero-description {
+    color: #D5E2EF;
+    max-width: 600px;
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+}
+
+
+/* 6. BUTTONS */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--teal);
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--white);
+    color: var(--navy);
+    transform: translateY(-3px);
+}
+
+
+/* 7. PROFILE CARD */
+
+.hero-card {
+    flex: 0.8;
+    min-width: 250px;
+    max-width: 340px;
+    text-align: center;
+    padding: 35px 25px;
+    border-radius: 18px;
+
+    background: rgba(255,255,255,0.10);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+
+    transition: var(--transition);
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+}
+
+.profile-placeholder {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--teal),
+        var(--gold)
+    );
+
+    color: var(--navy);
+    font-size: 2.8rem;
+    font-weight: 800;
+}
+
+.hero-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.hero-card p {
+    color: #D5E2EF;
+    font-size: 0.85rem;
+}
+
+.location {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+
+/* 8. COMMON SECTION STYLING */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--navy);
+    margin-bottom: 35px;
+}
+
+
+/* 9. ABOUT SECTION */
+
+.about-section {
+    background-color: var(--white);
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-content p {
+    margin-bottom: 17px;
+    color: var(--grey);
+    font-size: 1.02rem;
+}
+
+
+/* 10. EDUCATION SECTION */
+
+.education-section {
+    background-color: var(--light);
+}
+
+.education-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 22px;
+}
+
+.education-card {
+    background: var(--white);
+    padding: 28px;
+    border-radius: 12px;
+    border-bottom: 4px solid var(--teal);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.education-card:hover {
+    transform: translateY(-7px);
+}
+
+.education-year {
+    display: inline-block;
+    color: var(--blue);
+    background: #E4F4F7;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.education-card h3 {
+    font-size: 1.15rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.course {
+    color: var(--blue);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.education-status {
+    margin-top: 15px;
+    color: var(--grey);
+    font-size: 0.85rem;
+}
+
+
+/* 11. INTERESTS SECTION */
+
+.interests-section {
+    background-color: var(--white);
+}
+
+.interest-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 20px;
+}
+
+.interest-card {
+    background: var(--light);
+    padding: 28px;
+    border-radius: 12px;
+    border-left: 4px solid var(--teal);
+    transition: var(--transition);
+}
+
+.interest-card:hover {
+    background: var(--navy);
+    color: var(--white);
+    transform: translateY(-5px);
+}
+
+.interest-card h3 {
+    color: var(--blue);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.interest-card:hover h3 {
+    color: var(--teal);
+}
+
+.interest-card p {
+    font-size: 0.92rem;
+    color: var(--grey);
+}
+
+.interest-card:hover p {
+    color: #D5E2EF;
+}
+
+
+/* 12. PROJECTS SECTION */
+
+.projects-section {
+    background-color: var(--light);
+}
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 25px;
+}
+
+.project-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(20,45,78,0.13);
+}
+
+.project-number {
+    color: var(--teal);
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    color: var(--navy);
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+}
+
+.project-card p {
+    color: var(--grey);
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags span {
+    background: #E4F4F7;
+    color: var(--blue);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+
+/* 13. FUTURE VISION SECTION */
+
+.vision-section {
+    background: linear-gradient(
+        120deg,
+        var(--navy),
+        var(--blue)
+    );
+
+    text-align: center;
+    color: var(--white);
+}
+
+.vision-section .section-label {
+    color: var(--gold);
+}
+
+.vision-section .section-title {
+    color: var(--white);
+}
+
+.vision-content {
+    max-width: 800px;
+}
+
+.vision-content > p:not(.section-label) {
+    color: #D5E2EF;
+    margin-bottom: 20px;
+}
+
+.vision-highlight {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold) !important;
+    margin-top: 30px;
+}
+
+
+/* 14. CONTACT SECTION */
+
+.contact-section {
+    background-color: var(--white);
+    text-align: center;
+}
+
+.contact-description {
+    color: var(--grey);
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    font-style: normal;
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+}
+
+.contact-details strong {
+    color: var(--navy);
+}
+
+.contact-details a {
+    color: var(--blue);
+    transition: var(--transition);
+}
+
+.contact-details a:hover {
+    color: var(--teal);
+}
+
+.contact-button {
+    margin-top: 10px;
+}
+
+
+/* 15. FOOTER */
+
+.footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.footer > .container > p {
+    color: #D5E2EF;
+    font-size: 0.9rem;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.8rem !important;
+    color: #9FB1C5 !important;
+}
+
+
+/* 16. TABLET RESPONSIVENESS */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        padding: 18px 0;
+        gap: 15px;
+    }
+
+    .navigation ul {
+        gap: 15px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+}
+
+
+/* 17. MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .header {
+        position: relative;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navigation ul {
+        gap: 10px 16px;
+    }
+
+    .navigation a {
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .education-grid,
+    .interest-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-highlight {
+        font-size: 1.05rem;
+    }
+
+}
+
+
+/* 18. ACCESSIBILITY */
+
+a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
